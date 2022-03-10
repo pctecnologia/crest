@@ -21,6 +21,15 @@
 		const VERSION = '1.36';
 		const BATCH_COUNT    = 50;//count batch 1 query
 		const TYPE_TRANSPORT = 'json';// json or xml
+		
+		public function refresh()
+		{			
+			$arSettings = static::getAppSettings();			
+			$result = static::GetNewAuth($arParams);
+			
+			return $result;
+		}
+
 
 		/**
 		 * call where install application even url
